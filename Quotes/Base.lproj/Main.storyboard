@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9jc-1e-kH7">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Authors-->
+        <scene sceneID="ka2-vY-k9i">
+            <objects>
+                <viewController id="bjv-dk-8uo" customClass="AuthorsViewController" customModule="Quotes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yT7-GV-BcT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jX7-JY-4dV">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="QuoteCell" rowHeight="110" id="rSM-aQ-JG8" customClass="QuoteCell" customModule="Quotes" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="110"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rSM-aQ-JG8" id="jH0-mb-amA">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="109.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hi9-pI-kj2">
+                                                    <rect key="frame" x="24" y="24" width="358" height="61.5"/>
+                                                    <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="hi9-pI-kj2" firstAttribute="bottom" secondItem="jH0-mb-amA" secondAttribute="bottomMargin" id="KRb-Mc-YMF"/>
+                                                <constraint firstItem="hi9-pI-kj2" firstAttribute="leading" secondItem="jH0-mb-amA" secondAttribute="leadingMargin" id="QmD-lZ-J8c"/>
+                                                <constraint firstItem="hi9-pI-kj2" firstAttribute="top" secondItem="jH0-mb-amA" secondAttribute="topMargin" id="SuH-ki-B3K"/>
+                                                <constraint firstItem="hi9-pI-kj2" firstAttribute="trailing" secondItem="jH0-mb-amA" secondAttribute="trailingMargin" id="zjP-dl-TZh"/>
+                                            </constraints>
+                                            <directionalEdgeInsets key="directionalLayoutMargins" top="24" leading="24" bottom="24" trailing="32"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="quoteLabel" destination="hi9-pI-kj2" id="Q1h-Gz-E6K"/>
+                                            <segue destination="Irt-g5-ZGm" kind="show" id="XBg-pm-fD7"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="delegate" destination="bjv-dk-8uo" id="ki6-bM-JBn"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="jX7-JY-4dV" secondAttribute="bottom" id="NyX-80-7Ip"/>
+                            <constraint firstItem="jX7-JY-4dV" firstAttribute="trailing" secondItem="Ene-kM-ylx" secondAttribute="trailing" id="TKH-MB-acL"/>
+                            <constraint firstItem="jX7-JY-4dV" firstAttribute="leading" secondItem="Ene-kM-ylx" secondAttribute="leading" id="XJo-JI-AAU"/>
+                            <constraint firstItem="jX7-JY-4dV" firstAttribute="top" secondItem="yT7-GV-BcT" secondAttribute="top" id="g4W-tK-mdn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ene-kM-ylx"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Authors" id="CKq-jw-FfQ"/>
+                    <connections>
+                        <outlet property="tableView" destination="jX7-JY-4dV" id="wKQ-XB-GwX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ycQ-Ty-dTG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="202.89855072463769" y="265.84821428571428"/>
+        </scene>
+        <!--Quote-->
+        <scene sceneID="c3m-RA-cai">
+            <objects>
+                <viewController title="Quote" id="Irt-g5-ZGm" customClass="DetailViewController" customModule="Quotes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j0j-WM-2Yb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vsi-ER-EEk">
+                                <rect key="frame" x="32" y="172" width="350" height="184.5"/>
+                                <string key="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</string>
+                                <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="― Lorem Ipsum" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iJI-KK-ptt">
+                                <rect key="frame" x="32" y="388.5" width="350" height="18"/>
+                                <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="15"/>
+                                <color key="textColor" name="Downriver"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="iJI-KK-ptt" firstAttribute="leading" secondItem="j0j-WM-2Yb" secondAttribute="leadingMargin" id="6d4-gy-ktI"/>
+                            <constraint firstItem="Vsi-ER-EEk" firstAttribute="leading" secondItem="j0j-WM-2Yb" secondAttribute="leadingMargin" id="9hN-Rj-dZ5"/>
+                            <constraint firstItem="Vsi-ER-EEk" firstAttribute="top" secondItem="j0j-WM-2Yb" secondAttribute="topMargin" id="TkB-Fa-VyX"/>
+                            <constraint firstItem="iJI-KK-ptt" firstAttribute="top" secondItem="Vsi-ER-EEk" secondAttribute="bottom" constant="32" id="t7W-zf-R6f"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="iJI-KK-ptt" secondAttribute="trailing" id="wE7-oL-yUD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Vsi-ER-EEk" secondAttribute="trailing" id="yO9-xN-ek9"/>
+                        </constraints>
+                        <directionalEdgeInsets key="directionalLayoutMargins" top="32" leading="32" bottom="32" trailing="32"/>
+                        <viewLayoutGuide key="safeArea" id="H9N-JV-cz5"/>
+                    </view>
+                    <connections>
+                        <outlet property="authorLabel" destination="iJI-KK-ptt" id="zM1-ow-FlN"/>
+                        <outlet property="textLabel" destination="Vsi-ER-EEk" id="CKo-Pz-HDj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="reo-DE-rDl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1164" y="-58"/>
+        </scene>
+        <!--Quotes-->
+        <scene sceneID="gtI-gX-xVa">
+            <objects>
+                <viewController id="IFe-Lb-QnH" customClass="QuotesViewController" customModule="Quotes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sKc-9t-mOI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zVG-hW-tvN">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="separatorInset" minX="24" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="QuoteCell" rowHeight="144" id="xyz-Sy-eF5" customClass="QuoteCell" customModule="Quotes" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="144"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xyz-Sy-eF5" id="Xwr-Sg-kxt">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="143.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="7VS-aB-js7">
+                                                    <rect key="frame" x="24" y="24" width="366" height="95"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="awk-N1-DIH">
+                                                            <rect key="frame" x="0.0" y="0.0" width="366" height="61.5"/>
+                                                            <fontDescription key="fontDescription" name="Georgia-Italic" family="Georgia" pointSize="18"/>
+                                                            <color key="textColor" name="Downriver"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="― Lorem Ipsum" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="drt-7g-a0e">
+                                                            <rect key="frame" x="0.0" y="77.5" width="366" height="17.5"/>
+                                                            <fontDescription key="fontDescription" name="Georgia-Bold" family="Georgia" pointSize="15"/>
+                                                            <color key="textColor" name="Downriver"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="7VS-aB-js7" secondAttribute="bottom" constant="0.5" id="38M-Q7-a2a"/>
+                                                <constraint firstItem="7VS-aB-js7" firstAttribute="leading" secondItem="Xwr-Sg-kxt" secondAttribute="leadingMargin" id="9x6-Vl-f8g"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="7VS-aB-js7" secondAttribute="trailing" id="Zwg-f2-Wcf"/>
+                                                <constraint firstItem="7VS-aB-js7" firstAttribute="top" secondItem="Xwr-Sg-kxt" secondAttribute="topMargin" id="gvk-mf-Fv4"/>
+                                            </constraints>
+                                            <directionalEdgeInsets key="directionalLayoutMargins" top="24" leading="24" bottom="24" trailing="24"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="authorLabel" destination="drt-7g-a0e" id="HiJ-OI-yyi"/>
+                                            <outlet property="quoteLabel" destination="awk-N1-DIH" id="Iar-l9-axv"/>
+                                            <segue destination="Irt-g5-ZGm" kind="show" id="NbX-jY-1SN"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="zVG-hW-tvN" secondAttribute="bottom" id="HYx-3B-xhK"/>
+                            <constraint firstItem="zVG-hW-tvN" firstAttribute="top" secondItem="sKc-9t-mOI" secondAttribute="top" id="P91-8l-ByA"/>
+                            <constraint firstItem="zVG-hW-tvN" firstAttribute="trailing" secondItem="dtD-SF-jYZ" secondAttribute="trailing" id="nF6-9e-WNM"/>
+                            <constraint firstItem="zVG-hW-tvN" firstAttribute="leading" secondItem="dtD-SF-jYZ" secondAttribute="leading" id="v4Y-88-0Tp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dtD-SF-jYZ"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Quotes" id="F2y-Le-9oK"/>
+                    <connections>
+                        <outlet property="tableView" destination="zVG-hW-tvN" id="8Kh-5k-fgg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EpU-8o-NWi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="202.89855072463769" y="-382.36607142857139"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="XOc-Hg-mhy">
+            <objects>
+                <tabBarController id="9jc-1e-kH7" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FWK-TP-Urn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" name="Haverlock Blue"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="6Xg-73-qHA" kind="relationship" relationship="viewControllers" id="O2H-L1-fVw"/>
+                        <segue destination="cPj-Ky-eEf" kind="relationship" relationship="viewControllers" id="C29-8v-FVi"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iIi-p6-3nI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1707" y="-58"/>
+        </scene>
+        <!--Quotes-->
+        <scene sceneID="z9M-D8-0br">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6Xg-73-qHA" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Quotes" image="Quotes" id="awj-Ig-zT7"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="K1H-D9-jr3">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="IFe-Lb-QnH" kind="relationship" relationship="rootViewController" id="lsJ-6f-gRg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ujl-Iz-2zT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-707.24637681159425" y="-382.36607142857139"/>
+        </scene>
+        <!--Authors-->
+        <scene sceneID="qr0-ev-u3i">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cPj-Ky-eEf" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Authors" image="Authors" id="WBN-jP-kLS"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="dpF-zb-VA4">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bjv-dk-8uo" kind="relationship" relationship="rootViewController" id="qb4-xr-WWl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KRh-rT-frX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-707.24637681159425" y="266.51785714285711"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Authors" width="30" height="30"/>
+        <image name="Quotes" width="30" height="30"/>
+        <namedColor name="Downriver">
+            <color red="0.031372549019607843" green="0.13725490196078433" blue="0.25882352941176473" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Haverlock Blue">
+            <color red="0.29019607843137257" green="0.56470588235294117" blue="0.88627450980392153" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="XBg-pm-fD7"/>
+    </inferredMetricsTieBreakers>
+</document>
